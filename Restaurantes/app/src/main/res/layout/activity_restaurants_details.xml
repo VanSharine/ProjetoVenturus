@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.RestaurantsDetailsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivDetailsMainImage"
+                    android:layout_width="@dimen/layout_width_neutral"
+                    android:layout_height="@dimen/maim_size_image"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_baseline_recent_actors_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/ibDetailsBack"
+                    style="@style/ButtonBack"
+                    android:layout_width="@dimen/button_back"
+                    android:layout_height="@dimen/button_back"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/tvDetailsMainName"
+                    style="@style/ShadowDefault"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/image_radius_default"
+                    android:textSize="@dimen/name_default"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivDetailsMainImage"
+                    app:layout_constraintEnd_toEndOf="@+id/ivDetailsMainImage"
+                    app:layout_constraintStart_toStartOf="@id/ivDetailsMainImage"
+                    tools:text="tset testset" />
+
+                <TextView
+                    android:id="@+id/tvPlateTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_main_plate_left"
+                    android:layout_marginTop="@dimen/margin_main_plate"
+                    android:text="Pratos Principais"
+                    android:textColor="@color/shuttle_gray"
+                    android:textSize="@dimen/name_default"
+
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/ivDetailsMainImage"
+                    app:layout_constraintStart_toStartOf="@id/ivDetailsMainImage"
+                    app:layout_constraintTop_toBottomOf="@id/ivDetailsMainImage" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_marginLeft="@dimen/margin_toolbar" />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvListDetailsRestaurants"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintTop_toBottomOf="@+id/tvPlateTitle" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

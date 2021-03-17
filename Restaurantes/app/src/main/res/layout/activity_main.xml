@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".view.activity.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilMail"
+            style="@style/TexteInputLayoutDefault"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_default"
+            android:hint="@string/mail"
+
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etMail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blue_500" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPassword"
+            style="@style/TexteInputLayoutDefault"
+            android:layout_width="@dimen/layout_width_neutral"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_default"
+            android:hint="@string/password"
+            app:layout_constraintEnd_toEndOf="@id/tilMail"
+            app:layout_constraintStart_toStartOf="@id/tilMail"
+            app:layout_constraintTop_toBottomOf="@id/tilMail">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:id="@+id/etPassword"
+                android:textColor="@color/blue_500" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnLogin"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="@dimen/layout_width_neutral"
+            android:layout_height="@dimen/button_height_default"
+            android:layout_marginTop="@dimen/margin_top_login"
+            android:backgroundTint="@drawable/selector_button_default"
+            android:text="LOG IN"
+            android:enabled="false"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/tilMail"
+            app:layout_constraintStart_toStartOf="@id/tilMail"
+            app:layout_constraintTop_toBottomOf="@id/tilPassword" />
+
+        <View
+            style="@style/Divider.Horizontal"
+            android:layout_marginTop="@dimen/margin_top_div"
+            app:layout_constraintEnd_toStartOf="@id/tvSeparator"
+            app:layout_constraintStart_toStartOf="@id/tilMail"
+            app:layout_constraintTop_toBottomOf="@id/btnLogin"/>
+
+        <TextView
+            android:id="@+id/tvSeparator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_or"
+            android:padding="@dimen/margin_main_plate_left"
+            android:text="OR"
+            android:textColor="@color/river_bed"
+            app:layout_constraintEnd_toEndOf="@id/tilMail"
+            app:layout_constraintStart_toStartOf="@id/tilMail"
+            app:layout_constraintTop_toBottomOf="@id/btnLogin" />
+
+        <View
+            style="@style/Divider.Horizontal"
+            android:layout_marginTop="@dimen/margin_top_div"
+            app:layout_constraintStart_toEndOf="@id/tvSeparator"
+            app:layout_constraintTop_toBottomOf="@id/btnLogin" />
+
+        <Button
+            android:id="@+id/btnRegister"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="@dimen/layout_width_neutral"
+            android:layout_height="@dimen/button_height_default"
+            android:backgroundTint="@color/regent_gray"
+            android:text="REGISTER"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/tilMail"
+            app:layout_constraintStart_toStartOf="@id/tilMail"
+            app:layout_constraintTop_toBottomOf="@id/tvSeparator"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.8"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

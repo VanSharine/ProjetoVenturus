@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Restaurantes</string>
+    <string name="mail">Email</string>
+    <string name="password">Senha</string>
+    <string name="name">Nome</string>
+    <string name="repeatePassword">Repita a Senha</string>
+</resources>

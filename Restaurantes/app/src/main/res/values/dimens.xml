@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="layout_width_neutral">0dp</dimen>
+    <dimen name="image_radius_default">10dp</dimen>
+    <dimen name="margin_main_plate_left">20dp</dimen>
+    <dimen name="margin_default">24dp</dimen>
+    <dimen name="margin_main_plate">25dp</dimen>
+    <dimen name="button_back">48dp</dimen>
+    <dimen name="margin_toolbar">50dp</dimen>
+    <dimen name="image_size_default">190dp</dimen>
+    <dimen name="maim_size_image">250dp</dimen>
+    <dimen name="hour_default">12sp</dimen>
+    <dimen name="address_default">14sp</dimen>
+    <dimen name="name_default">25sp</dimen>
+    <dimen name="button_height_default">70dp</dimen>
+    <dimen name="margin_top_login">67dp</dimen>
+    <dimen name="margin_top_div">80dp</dimen>
+    <dimen name="margin_top_or">52dp</dimen>
+    <dimen name="description_plate">16sp</dimen>
+    <dimen name="card_image_height">120dp</dimen>
+    <dimen name="name_plate_default">18sp</dimen>
+</resources>

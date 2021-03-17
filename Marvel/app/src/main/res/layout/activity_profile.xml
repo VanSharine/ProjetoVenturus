@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#00162C"
+android:fillViewport="true"
+tools:context=".view.activity.ProfileActivity">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/rvContactsItemAvatar"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="115dp"
+        android:elevation="4dp"
+        android:src="@drawable/img_profile"
+        app:layout_constraintEnd_toEndOf="@id/loginHead"
+        app:layout_constraintStart_toStartOf="@id/loginHead"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:layout_constraintEnd_toEndOf="@id/loginHead"
+        app:layout_constraintStart_toStartOf="@id/loginHead"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/loginHead"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="@color/alizarinCrimson"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--<androidx.cardview.widget.CardView
+        android:id="@+id/login2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="150dp"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/loginHead"
+        app:layout_constraintTop_toBottomOf="@+id/loginHead" />-->
+    <FrameLayout
+        android:id="@+id/login2"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginRight="21dp"
+        android:layout_marginTop="70dp"
+        android:backgroundTint="@color/white"
+        android:background="@drawable/rounded_shape"
+        android:elevation="4dp"
+        app:layout_constraintTop_toTopOf = "@id/loginHead"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <TextView
+        android:id="@+id/tvProfileName"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="25dp"
+        android:autoSizeTextType="uniform"
+        android:elevation="3dp"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="@+id/loginHead"
+        app:layout_constraintStart_toStartOf="@id/loginHead"
+        app:layout_constraintTop_toBottomOf="@id/rvContactsItemAvatar" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilProfileEmail"
+        style="@style/TexteInputLayoutDefault"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="40dp"
+        android:elevation="4dp"
+        android:hint="Email"
+        android:textColor="@color/thunderbird"
+        android:textColorHint="@color/alizarinCrimson"
+        android:textSize="16sp"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/mirage"
+        app:hintTextColor="@color/alizarinCrimson"
+        app:layout_constraintEnd_toEndOf="@id/tvProfileName"
+        app:layout_constraintStart_toStartOf="@id/tvProfileName"
+        app:layout_constraintTop_toBottomOf="@id/tvProfileName">
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:id="@+id/tietProfileEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/heather" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilProfilePassword"
+        style="@style/TexteInputLayoutDefault"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="40dp"
+        android:elevation="4dp"
+        android:hint="Password"
+        android:textColor="@color/thunderbird"
+        android:textColorHint="@color/alizarinCrimson"
+        android:textSize="16sp"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/mirage"
+        app:hintTextColor="@color/alizarinCrimson"
+        app:layout_constraintEnd_toEndOf="@id/tvProfileName"
+        app:layout_constraintStart_toStartOf="@id/tvProfileName"
+        app:layout_constraintTop_toBottomOf="@id/tilProfileEmail">
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:id="@+id/tietProfilePassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/heather" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnEditProfile"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:backgroundTint="@color/alizarinCrimson"
+        android:elevation="4dp"
+        android:text="Edit Profile"
+        android:textColor="@color/white"
+
+        app:layout_constraintStart_toStartOf="@id/tvProfileName"
+        app:layout_constraintEnd_toEndOf="@id/tvProfileName"
+        app:layout_constraintTop_toBottomOf="@id/tilProfilePassword"
+        app:layout_constraintVertical_bias="1.0"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

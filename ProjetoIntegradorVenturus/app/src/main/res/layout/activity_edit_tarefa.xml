@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    app:behavior_hideable="true"
+    tools:context=".EditTarefaActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivTituloBack"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/shape_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTituloNovaTarefa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:text="Tarefas"
+            android:textColor="#7F7F7F"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivRound"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/curva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTituloNovaTarefa" />
+
+        <ImageView
+            android:id="@+id/ivTop"
+            android:layout_width="132dp"
+            android:layout_height="7dp"
+            android:background="@drawable/top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivTituloBack" />
+
+        <TextView
+            android:id="@+id/tvNovaTarefa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="40dp"
+            android:text="Tarefa para editar"
+            android:textColor="#222324"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivTop" />
+
+        <ImageView
+            android:id="@+id/ivLateral"
+            android:layout_width="2dp"
+            android:layout_height="56dp"
+            android:background="@drawable/top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvNovaTarefa"
+            app:layout_constraintTop_toTopOf="@+id/tvNovaTarefa" />
+
+        <Button
+            android:id="@+id/btnEditar"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:enabled="false"
+            android:textColor="#E16B6B"
+            android:textSize="18sp"
+            app:icon="@drawable/ic_editar"
+            app:iconTint="#E16B6B"
+            app:layout_constraintStart_toEndOf="@+id/ivLateral"
+            app:layout_constraintTop_toTopOf="@+id/tvNovaTarefa" />
+
+        <TextView
+            android:id="@+id/tvSubtitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="Categoria da tarefa"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNovaTarefa"
+
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescricaoNovaTarefa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:text="Descriçao da tarefa Descriçao \n
+                da tarefa Descriçao da tarefa da tarefa Descriçao da tarefa  \n
+                da tarefa Descriçao da tarefa da tarefa Descriçao da tarefa  \n
+                da tarefa Descriçao da tarefa da tarefa Descriçao da tarefa  \n
+                "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSubtitulo"
+
+            />
+
+        <Button
+            android:id="@+id/btnDeletar"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:enabled="false"
+            android:text="Excluir Tarefa"
+            android:textAllCaps="false"
+            android:textColor="#E16B6B"
+            android:textSize="18sp"
+            app:icon="@drawable/ic_excluir"
+            app:iconTint="#E16B6B"
+            app:layout_constraintBottom_toTopOf="@+id/btnIniciarTarefa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <Button
+            android:id="@+id/btnIniciarTarefa"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginRight="15dp"
+            android:backgroundTint="#E16B6B"
+            android:enabled="false"
+            android:text="Iniciar Tarefa"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tvDescricaoNovaTarefa"
+            app:layout_constraintStart_toStartOf="@+id/tvDescricaoNovaTarefa"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescricaoNovaTarefa"
+            app:layout_constraintVertical_bias="1.0"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Pill" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.PlateActivity">
+
+
+
+    <ImageView
+        android:id="@+id/ivPlateImage"
+        android:layout_width="@dimen/layout_width_neutral"
+        android:layout_height="@dimen/maim_size_image"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <ImageButton
+        android:id="@+id/ibBack"
+        style="@style/ButtonBack"
+        android:layout_height="@dimen/button_back"
+        android:layout_width="@dimen/button_back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <TextView
+        android:id="@+id/tvPlateName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/name_default"
+        android:padding="@dimen/image_radius_default"
+        style="@style/ShadowDefault"
+        app:layout_constraintBottom_toBottomOf="@+id/ivPlateImage"
+        tools:text="Salada com molho Gengibre" />
+
+    <TextView
+        android:id="@+id/tvPlateDescription"
+        android:layout_marginTop="@dimen/margin_main_plate_left"
+        android:padding="@dimen/image_radius_default"
+        android:layout_width="match_parent"
+        android:textSize="@dimen/description_plate"
+        android:textColor="@color/regent_gray"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvPlateName"
+        tools:text="Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusant doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis." />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    app:behavior_hideable="true"
+    tools:context=".NovaTarefaFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvNovaTarefa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:text="Nova Tarefa"
+            android:textColor="#222324"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+        <TextView
+            android:id="@+id/tvSubtitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="Adicione uma tarefa que ainda será feita"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNovaTarefa"
+
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilTarefa"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="18dp"
+            android:background="#F4F4F4"
+            android:backgroundTint="#F4F4F4"
+            android:hint="Título da Tarefa"
+            app:hintTextColor="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSubtitulo">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tieTarefa"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilTarefaDescricao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#F4F4F4"
+            android:gravity="top|left"
+            android:hint="Descriçao da Tarefa"
+            android:lines="100"
+            android:maxLines="15"
+            android:minLines="5"
+            app:hintTextColor="#000000"
+            app:layout_constraintEnd_toEndOf="@+id/tilTarefa"
+            app:layout_constraintStart_toStartOf="@+id/tilTarefa"
+            app:layout_constraintTop_toBottomOf="@+id/tilTarefa">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tieTarefaDescricao"
+                android:layout_width="match_parent"
+                android:layout_height="135dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnCriarTarefa"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginRight="15dp"
+            android:backgroundTint="#E16B6B"
+            android:enabled="false"
+            android:text="Criar Tarefa"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/tilTarefaDescricao"
+            app:layout_constraintStart_toStartOf="@+id/tilTarefaDescricao"
+            app:layout_constraintTop_toBottomOf="@id/tilTarefaDescricao"
+            app:layout_constraintVertical_bias="1.0"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Pill" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

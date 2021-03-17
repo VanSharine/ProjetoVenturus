@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".view.activity.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilFormName"
+            style="@style/TexteInputLayoutDefault"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_default"
+            android:hint="@string/name"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etFormName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blue_500" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilFormMail"
+            style="@style/TexteInputLayoutDefault"
+            android:layout_width="@dimen/layout_width_neutral"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_default"
+            android:hint="@string/mail"
+            app:layout_constraintTop_toBottomOf="@id/tilFormName"
+            app:layout_constraintStart_toStartOf="@id/tilFormName"
+            app:layout_constraintEnd_toEndOf="@id/tilFormName"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etFormMail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blue_500" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilFormPassword"
+            style="@style/TexteInputLayoutDefault"
+            android:layout_width="@dimen/layout_width_neutral"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_default"
+            android:hint="@string/password"
+            app:layout_constraintStart_toStartOf="@id/tilFormName"
+            app:layout_constraintEnd_toEndOf="@id/tilFormName"
+            app:layout_constraintTop_toBottomOf="@id/tilFormMail"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etFormPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textColor="@color/blue_500" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilFormRepeaatePassword"
+            style="@style/TexteInputLayoutDefault"
+            android:layout_width="@dimen/layout_width_neutral"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_default"
+            android:hint="@string/repeatePassword"
+            app:layout_constraintStart_toStartOf="@id/tilFormName"
+            app:layout_constraintEnd_toEndOf="@id/tilFormName"
+            app:layout_constraintTop_toBottomOf="@id/tilFormPassword"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etFormRepeatePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textColor="@color/blue_500" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:id="@+id/btnFormRegister"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="@dimen/layout_width_neutral"
+            android:layout_height="@dimen/button_height_default"
+            android:layout_marginTop="@dimen/margin_top_login"
+            android:backgroundTint="@drawable/selector_button_default"
+            android:text="REGISTER"
+            android:textColor="@color/white"
+            android:enabled="false"
+            app:layout_constraintStart_toStartOf="@id/tilFormName"
+            app:layout_constraintEnd_toEndOf="@id/tilFormName"
+            app:layout_constraintTop_toBottomOf="@id/tilFormPassword"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="1.0"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
